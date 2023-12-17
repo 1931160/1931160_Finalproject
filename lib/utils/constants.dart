@@ -25,7 +25,7 @@ const kButtonTextStyle = TextStyle(
 const kConditionTextStyle = TextStyle(
   fontSize: 14.0,
   fontFamily: 'Museo Moderno',
-  color: Colors.black,
+  color: Color(0xffe39292),
 );
 
 const kConditionTextStyleSmall = TextStyle(

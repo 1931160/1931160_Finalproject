@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:weather_today_completed/utils/constants.dart';
 import 'loading_screen.dart';
+
 class CityScreen extends StatefulWidget {
   @override
   _CityScreenState createState() => _CityScreenState();
@@ -11,7 +12,7 @@ class CityScreen extends StatefulWidget {
 //Add New
 
 class _CityScreenState extends State<CityScreen> {
-  late String cityName='';
+  late String cityName = '';
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class _CityScreenState extends State<CityScreen> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/city_background.png'),
+            image: AssetImage('images/bangladesh-dhaka.png'),
             fit: BoxFit.cover,
           ),
         ),
@@ -50,7 +51,7 @@ class _CityScreenState extends State<CityScreen> {
                 child: TextField(
                   style: TextStyle(
                     fontFamily: 'Museo Moderno',
-                    color: Colors.black,
+                    color: Color(0xff410202),
                   ),
                   decoration: kTextFieldInputDecoration,
                   onChanged: (value) {
@@ -58,26 +59,25 @@ class _CityScreenState extends State<CityScreen> {
                   },
                 ),
               ),
-            ElevatedButton(
-  style: ElevatedButton.styleFrom(
-    shape: StadiumBorder(),
-  ),
-  onPressed: () {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) {
-          return LoadingScreen(cityName: cityName);
-        },
-      ),
-    );
-  },
-  child: Text(
-    'Search Weather',
-    style: kButtonTextStyle,
-  ),
-),
-
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: StadiumBorder(),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return LoadingScreen(cityName: cityName);
+                      },
+                    ),
+                  );
+                },
+                child: Text(
+                  'Search Weather',
+                  style: kButtonTextStyle,
+                ),
+              ),
             ],
           ),
         ),

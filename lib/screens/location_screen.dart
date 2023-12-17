@@ -33,7 +33,6 @@ class LocationScreenState extends State<LocationScreen> {
       double temp = weatherData['main']['temp'];
       temperature = temp.toInt();
 
-
       double minTemp = weatherData['main']['temp_min'];
       minTemperature = minTemp.toInt();
 
@@ -46,10 +45,8 @@ class LocationScreenState extends State<LocationScreen> {
       int humid = weatherData['main']['humidity'];
       humidity = humid.toInt();
 
-
       String city = weatherData['name'];
       cityName = city;
-
     });
   }
 
@@ -59,7 +56,7 @@ class LocationScreenState extends State<LocationScreen> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/location_background.png'),
+            image: AssetImage('images/background.png'),
             fit: BoxFit.cover,
             colorFilter: ColorFilter.mode(
               Colors.black.withOpacity(0.09),
@@ -138,7 +135,7 @@ class LocationScreenState extends State<LocationScreen> {
                         textAlign: TextAlign.center,
                         style: kSmallTextStyle.copyWith(
                           fontSize: 16.0,
-                          color: Colors.black45,
+                          color: Color(0xfbe89e14),
                           fontWeight: FontWeight.w600,
                         ),
                       ),

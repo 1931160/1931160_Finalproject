@@ -53,17 +53,17 @@ class _LoadingScreenState extends State<LoadingScreen> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/location_background.png'),
+            image: AssetImage('images/background.png'),
             fit: BoxFit.cover,
             colorFilter: ColorFilter.mode(
-              Colors.black.withOpacity(0.09),
+              Colors.orange.withOpacity(0.09),
               BlendMode.darken,
             ),
           ),
         ),
         child: Center(
           child: SpinKitDoubleBounce(
-            color: Colors.white,
+            color: Color(0xffb6d236),
             size: 100.0,
           ),
         ),
